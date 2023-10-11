@@ -49,7 +49,7 @@ class _FadeTextState extends State<FadeText> with SingleTickerProviderStateMixin
     _controller = AnimationController(
       vsync: this,
       duration: widget.duration,
-    )..repeat(reverse: true);
+    )..repeat(reverse: false);
     _animation = Tween<double>(begin: 0, end: 1).animate(
       CurvedAnimation(parent: _controller, curve: Curves.fastOutSlowIn)
     );
